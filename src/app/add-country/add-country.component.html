@@ -1,0 +1,47 @@
+<form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label for="text" class="control-label">Country</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                formControlName="country"
+                [ngClass]="{'help-box':countryForm.get('country').invalid && (countryForm.get('country').dirty || countryForm.get('country').touched) && countryForm.get('country').errors.required}">
+                <small class="form-text" *ngIf="countryForm.get('country').invalid && (countryForm.get('country').dirty || countryForm.get('country').touched) && countryForm.get('country').errors.required">Value cannot be null.</small>
+            </div>
+            <div class="form-group col-lg-2">
+                <label for="number" class="control-label">Active cases</label>
+                <input 
+                type="number" 
+                class="form-control" 
+                formControlName="active"
+                [ngClass]="{'help-box':countryForm.get('active').invalid && (countryForm.get('active').dirty || countryForm.get('active').touched) && countryForm.get('active').errors.required}">
+                <small class="form-text" *ngIf="countryForm.get('active').invalid && (countryForm.get('active').dirty || countryForm.get('active').touched) && countryForm.get('active').errors.required">Value cannot be null.</small>
+            </div> 
+            <div class="form-group col-lg-2">
+                <label for="number" class="control-label">Reported cases</label>
+                <input 
+                type="number" 
+                class="form-control" 
+                formControlName="reported"
+                [ngClass]="{'help-box':countryForm.get('reported').invalid && (countryForm.get('reported').dirty || countryForm.get('reported').touched) && countryForm.get('reported').errors.required}">
+                <small class="form-text" *ngIf="countryForm.get('reported').invalid && (countryForm.get('reported').dirty || countryForm.get('reported').touched) && countryForm.get('reported').errors.required">Value cannot be null.</small>
+            </div> 
+            <div class="form-group col-lg-2">
+                <label for="number" class="control-label">Deaths</label>
+                <input 
+                type="number" 
+                class="form-control" 
+                formControlName="death"
+                [ngClass]="{'help-box':countryForm.get('death').invalid && (countryForm.get('death').dirty || countryForm.get('death').touched) && countryForm.get('death').errors.required}">
+                <small class="form-text" *ngIf="countryForm.get('death').invalid && (countryForm.get('death').dirty || countryForm.get('death').touched) && countryForm.get('death').errors.required">Value cannot be null.</small>
+            </div>
+            <div class="form-group col-lg-2 container">
+                <br>
+                <button class="btn btn-success" [disabled]="!countryForm.valid" type="submit">Add Country</button>
+            </div>
+        </div>
+    </div>
+</form>
+<br *ngIf="countryForm.valid || countryForm.untouched">

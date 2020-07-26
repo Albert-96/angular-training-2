@@ -1,0 +1,10 @@
+<br>
+<h2>Countries</h2>
+<br>
+  <div class="dropdown">
+    <select class="form-control" (change)="onClick($event.target.value)">
+      <option disabled selected>Select country</option>
+       <option *ngFor="let country of countryList;">{{country}}</option>
+    </select>
+</div>
+  <br>

@@ -1,0 +1,11 @@
+<br>
+<h2>Messages</h2>
+<br>
+<div class="card-deck">
+    <div class="card bg-{{message.status}}" *ngFor="let message of messageList; let i = index">
+      <div class="card-body text-center">
+        <p class="card-header">{{message.title}}</p>
+        <p class="card-text">{{message.message}}</p>
+      </div>
+    </div>
+  </div>

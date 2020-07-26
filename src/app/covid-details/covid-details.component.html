@@ -1,0 +1,32 @@
+<div class="container">
+    <br>
+    <h2>Details</h2>
+    <br>
+    <div *ngIf="countryDetail" class="card-deck row">
+        <div class="card bg-light" (click)="onClick('active')">
+          <div class="card-body text-center">
+            <p class="card-text">Active</p>
+            <p class="card-text">{{countryDetail.active}}</p>
+          </div>
+        </div>
+        <div class="card bg-warning" (click)="onClick('reported')">
+          <div class="card-body text-center">
+            <p class="card-text">Reported</p>
+            <p class="card-text">{{countryDetail.reported}}</p>
+          </div>
+        </div>
+        <div class="card bg-danger" (click)="onClick('death')">
+          <div class="card-body text-center">
+            <p class="card-text">Death</p>
+            <p class="card-text">{{countryDetail.death}}</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+</div>
+
+  
+

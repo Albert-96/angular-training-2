@@ -1,0 +1,48 @@
+<br>
+<br>
+<div class="row">
+    <div class="col-lg-2 offset-lg-5">
+        <div class="container">
+            <div class="card-deck border">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="card-header text-center">Login</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="email" class="control-label">Username</label>
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            formControlName="userName"
+                            [ngClass]="{'help-box':userName.invalid && (userName.dirty || userName.touched) && userName.errors.required}">
+                            <small class="form-text" *ngIf="passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required">Value cannot be null.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">Password</label>
+                            <input 
+                            type="password" 
+                            class="form-control" 
+                            formControlName="passWord"
+                            [ngClass]="{'help-box':passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required}">
+                            <small class="form-text" *ngIf="passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required">Value cannot be null.</small>
+                            <br>
+                            <!-- <div *ngIf="!isLoggedIn" class="alert alert-danger">
+                                <span *ngIf="!isLoggedIn">
+                                    Invalid login 
+                                </span>
+                            </div> -->
+                        </div> 
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="text-center" [disabled]="!loginForm.valid" type="submit" class="btn btn-secondary">Sign-In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+

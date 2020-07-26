@@ -1,0 +1,12 @@
+.card-deck {
+    width: 240px;
+}
+
+small {
+    color: red;
+}
+
+.help-box {
+    border-style: solid;
+    border-color: red;
+}
