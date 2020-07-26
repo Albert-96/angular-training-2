@@ -1,9 +1,9 @@
 <br>
 <br>
 <div class="row">
-    <div class="col-lg-2 offset-lg-5">
-        <div class="container">
-            <div class="card-deck border">
+    <div class="col-lg-3 offset-lg-4">
+        <div>
+            <div class="card border">
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <div class="card-header text-center">Login</div>
                     <div class="card-body">
@@ -14,7 +14,7 @@
                             class="form-control" 
                             formControlName="userName"
                             [ngClass]="{'help-box':userName.invalid && (userName.dirty || userName.touched) && userName.errors.required}">
-                            <small class="form-text" *ngIf="passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required">Value cannot be null.</small>
+                            <small class="form-text" *ngIf="userName.invalid && (userName.dirty || userName.touched) && userName.errors.required">Username cannot be empty.</small>
                         </div>
                         <div class="form-group">
                             <label for="password" class="control-label">Password</label>
@@ -23,13 +23,13 @@
                             class="form-control" 
                             formControlName="passWord"
                             [ngClass]="{'help-box':passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required}">
-                            <small class="form-text" *ngIf="passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required">Value cannot be null.</small>
+                            <small class="form-text" *ngIf="passWord.invalid && (passWord.dirty || passWord.touched) && passWord.errors.required">Password cannot be empty.</small>
                             <br>
-                            <!-- <div *ngIf="!isLoggedIn" class="alert alert-danger">
+                            <div *ngIf="!isLoggedIn && isSubmitted" class="alert alert-danger">
                                 <span *ngIf="!isLoggedIn">
-                                    Invalid login 
+                                    Invalid username / password 
                                 </span>
-                            </div> -->
+                            </div>
                         </div> 
                     </div>
                     <div class="card-footer text-center">

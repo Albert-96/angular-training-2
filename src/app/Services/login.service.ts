@@ -34,4 +34,8 @@ export class LoginService implements OnInit {
     this.isLoggedIn.next(false);
     this.isAuthenticated = false;
   }
+
+  addUser(user: User) {
+    this.userAccounts.push(user);
+  }
 }

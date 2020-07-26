@@ -6,10 +6,13 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active" [routerLink]="['dashboard']">Dashboard</a>
+            <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['dashboard']">Dashboard</a>
+            <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['countries']">Countries</a>
         </div>
         <div class="navbar-nav ml-auto">
             <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link">Logout</a>
+            <a *ngIf="!isLoggedIn" class="nav-item nav-link" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
         </div>
     </div>
-  </nav>
+  </nav>    
+  <app-sign-up></app-sign-up>

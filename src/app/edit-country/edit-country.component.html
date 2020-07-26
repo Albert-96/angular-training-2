@@ -21,7 +21,7 @@
                                 class="form-control" 
                                 formControlName="country"
                                 [ngClass]="{'help-box':countryForm.get('country').invalid && (countryForm.get('country').dirty || countryForm.get('country').touched) && countryForm.get('country').errors.required}">
-                                <small class="form-text" *ngIf="countryForm.get('country').invalid && (countryForm.get('country').dirty || countryForm.get('country').touched) && countryForm.get('country').errors.required">Value cannot be null.</small>
+                                <small class="form-text" *ngIf="countryForm.get('country').invalid && (countryForm.get('country').dirty || countryForm.get('country').touched) && countryForm.get('country').errors.required">Country cannot be empty.</small>
                             </div>
                             <div class="form-group">
                                 <label for="number" class="control-label">Active cases</label>
@@ -30,7 +30,7 @@
                                 class="form-control" 
                                 formControlName="active"
                                 [ngClass]="{'help-box':countryForm.get('active').invalid && (countryForm.get('active').dirty || countryForm.get('active').touched) && countryForm.get('active').errors.required}">
-                                <small class="form-text" *ngIf="countryForm.get('active').invalid && (countryForm.get('active').dirty || countryForm.get('active').touched) && countryForm.get('active').errors.required">Value cannot be null.</small>
+                                <small class="form-text" *ngIf="countryForm.get('active').invalid && (countryForm.get('active').dirty || countryForm.get('active').touched) && countryForm.get('active').errors.required">Active cases cannot be empty.</small>
                             </div> 
                             <div class="form-group">
                                 <label for="number" class="control-label">Reported cases</label>
@@ -39,7 +39,7 @@
                                 class="form-control" 
                                 formControlName="reported"
                                 [ngClass]="{'help-box':countryForm.get('reported').invalid && (countryForm.get('reported').dirty || countryForm.get('reported').touched) && countryForm.get('reported').errors.required}">
-                                <small class="form-text" *ngIf="countryForm.get('reported').invalid && (countryForm.get('reported').dirty || countryForm.get('reported').touched) && countryForm.get('reported').errors.required">Value cannot be null.</small>
+                                <small class="form-text" *ngIf="countryForm.get('reported').invalid && (countryForm.get('reported').dirty || countryForm.get('reported').touched) && countryForm.get('reported').errors.required">Reported cases cannot be empty.</small>
                             </div> 
                             <div class="form-group">
                                 <label for="number" class="control-label">Deaths</label>
@@ -48,7 +48,7 @@
                                 class="form-control" 
                                 formControlName="death"
                                 [ngClass]="{'help-box':countryForm.get('death').invalid && (countryForm.get('death').dirty || countryForm.get('death').touched) && countryForm.get('death').errors.required}">
-                                <small class="form-text" *ngIf="countryForm.get('death').invalid && (countryForm.get('death').dirty || countryForm.get('death').touched) && countryForm.get('death').errors.required">Value cannot be null.</small>
+                                <small class="form-text" *ngIf="countryForm.get('death').invalid && (countryForm.get('death').dirty || countryForm.get('death').touched) && countryForm.get('death').errors.required">Death cases cannot be empty.</small>
                             </div>
                         </div>
                 </div>

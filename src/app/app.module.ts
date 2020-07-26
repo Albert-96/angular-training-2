@@ -20,6 +20,7 @@ import { CountryPageComponent } from './country-page/country-page.component';
 import { AddCountryComponent } from './add-country/add-country.component';
 import { EditCountryComponent } from './edit-country/edit-country.component';
 import { DeleteCountryComponent } from './delete-country/delete-country.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DeleteCountryComponent } from './delete-country/delete-country.componen
     CountryPageComponent,
     AddCountryComponent,
     EditCountryComponent,
-    DeleteCountryComponent
+    DeleteCountryComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
