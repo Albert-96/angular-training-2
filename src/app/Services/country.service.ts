@@ -20,10 +20,6 @@ export class CountryService {
     new CountryDetail("PAKISTAN",60496,263496,5568),
     new CountryDetail("CHINA",5678,83660,4634),
     new CountryDetail("RUSSIA",200546,771546,12342),
-    new CountryDetail("INDIA",400391,1118017,27503),
-    new CountryDetail("PAKISTAN",60496,263496,5568),
-    new CountryDetail("CHINA",5678,83660,4634),
-    new CountryDetail("RUSSIA",200546,771546,12342),
   ];
 
   constructor() { 

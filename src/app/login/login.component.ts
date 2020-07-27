@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   isSubmitted: boolean = false;
 
   loginForm = this.fb.group({
-    userName : new FormControl(this.user.username, [Validators.required]),
+    userName : new FormControl(this.user.username, [Validators.required, Validators.email]),
     passWord : new FormControl(this.user.password, [Validators.required])
   });
 
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.isSubmitted = true;
     this.loginServcie.login(this.userName.value, this.passWord.value);
     if (this.isLoggedIn) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/states']);
     }
   }
 

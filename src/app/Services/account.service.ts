@@ -7,7 +7,7 @@ import { User } from '../Models/user.model';
 export class AccountService {
 
   Users : User[] = [
-    new User("Test","Test"),
+    new User("T@T","T@T"),
   ];
 
   constructor() { }

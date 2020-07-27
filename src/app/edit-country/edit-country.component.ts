@@ -30,7 +30,7 @@ export class EditCountryComponent implements OnChanges {
       'reported': new FormControl(this.countryDetail.reported, [Validators.required]),
       'death': new FormControl(this.countryDetail.death, [Validators.required]),
     });
-    this.closeButton = document.getElementById('close') as HTMLElement;
+    this.closeButton = document.getElementById('editClose') as HTMLElement;
   }
 
   onSubmit() {

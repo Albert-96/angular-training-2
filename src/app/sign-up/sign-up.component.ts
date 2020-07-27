@@ -18,6 +18,8 @@ export class SignUpComponent implements OnInit {
     new JobType('Other','')
   ];
 
+  closeButton: HTMLElement;
+
   constructor(private fb : FormBuilder,
               private loginService: LoginService) { }
 
@@ -28,7 +30,7 @@ export class SignUpComponent implements OnInit {
       'jobtype': new FormControl(this.jobType[0].jobType, [Validators.required]),
       'jobdescription' : new FormControl(this.jobType[0].jobDescription, [Validators.required])
     });
-
+    this.closeButton = document.getElementById('signClose') as HTMLElement;
     this.onChanges();
   }
 
@@ -51,6 +53,7 @@ export class SignUpComponent implements OnInit {
       this.signUp.get('jobdescription').value,
     );
     this.loginService.addUser(user);
+    this.closeButton.click();
   }
 
 }

@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from '../Services/country.service';
+import { HttpService } from '../Services/http.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  providers: [CountryService]
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private countryService: CountryService) { }
+  constructor(private countryService: CountryService,
+              private httpService: HttpService) { }
 
   ngOnInit(): void {
+    this.httpService.get();
   }
 
 }

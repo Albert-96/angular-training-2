@@ -18,9 +18,7 @@ export class CountryListComponent implements OnInit {
   ngOnInit(): void {
     this.countryList = this.countryService.countryList;
     this.countryDetailList = this.countryService.countryDetailList;
-    console.log('arrays initialized');
     this.countryService.countrySelected.emit(this.countryDetailList[0]);
-    console.log('Clicked');
   }
 
   onClick(country: string) {

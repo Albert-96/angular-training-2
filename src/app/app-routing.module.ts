@@ -6,10 +6,12 @@ import { AuthGuardService } from './Services/auth-guard.service';
 import { ActiveDetail } from './Models/active-cases.model';
 import { ActiveDetailComponent } from './active-detail/active-detail.component';
 import { CountryPageComponent } from './country-page/country-page.component';
+import { StateDashboardComponent } from './state-dashboard/state-dashboard.component';
 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: 'states', canActivate: [AuthGuardService], component: StateDashboardComponent},
   {path: 'dashboard', canActivate: [AuthGuardService], component: DashboardComponent},
   {path: 'detail/:status/:country', canActivate: [AuthGuardService], component: ActiveDetailComponent},
   {path: 'countries', canActivate: [AuthGuardService], component: CountryPageComponent},

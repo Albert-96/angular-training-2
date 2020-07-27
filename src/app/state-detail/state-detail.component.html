@@ -1,0 +1,29 @@
+<div class="container">
+    <br>
+    <h2>Details</h2>
+    <br>
+    <div *ngIf="stateDetail" class="card-deck row">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <p class="card-text">Active</p>
+            <p class="card-text">{{stateDetail.active}}</p>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <p class="card-text">Reported</p>
+            <p class="card-text">{{stateDetail.reported}}</p>
+          </div>
+        </div>
+        <div class="card bg-danger">
+          <div class="card-body text-center">
+            <p class="card-text">Death</p>
+            <p class="card-text">{{stateDetail.death}}</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+</div>

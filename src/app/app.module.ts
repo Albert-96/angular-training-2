@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,6 +22,11 @@ import { AddCountryComponent } from './add-country/add-country.component';
 import { EditCountryComponent } from './edit-country/edit-country.component';
 import { DeleteCountryComponent } from './delete-country/delete-country.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HttpService } from './Services/http.service';
+import { StateDashboardComponent } from './state-dashboard/state-dashboard.component';
+import { StateDetailComponent } from './state-detail/state-detail.component';
+import { StateListComponent } from './state-list/state-list.component';
+import { CountryService } from './Services/country.service';
 
 @NgModule({
   declarations: [
@@ -37,14 +43,18 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AddCountryComponent,
     EditCountryComponent,
     DeleteCountryComponent,
-    SignUpComponent
+    SignUpComponent,
+    StateDashboardComponent,
+    StateDetailComponent,
+    StateListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [AccountService, LoginService, AuthGuardService],
+  providers: [AccountService, LoginService, AuthGuardService, HttpService, CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

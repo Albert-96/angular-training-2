@@ -6,8 +6,9 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['dashboard']">Dashboard</a>
+            <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['states']">Dashboard</a>
             <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['countries']">Countries</a>
+            <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link active" [routerLink]="['dashboard']">First</a>
         </div>
         <div class="navbar-nav ml-auto">
             <a href="#" *ngIf="isLoggedIn" class="nav-item nav-link">Logout</a>
